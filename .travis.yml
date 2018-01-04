@@ -4,5 +4,8 @@ install:
 script:
   - sudo vagrant up
   - curl http://localhost:8080/index.php
+after-script:
+  - sudo vagrant halt
+  - sudo vagrant destroy
 notifications:
   email: false
