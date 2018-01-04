@@ -1,0 +1,8 @@
+language: bash
+install:
+  - scripts/travis_init.sh
+script:
+  - sudo vagrant up
+  - curl http://localhost:8080/index.php
+notifications:
+  email: false
