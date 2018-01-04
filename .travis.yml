@@ -1,5 +1,7 @@
 language: bash
 install:
+  # fix install virtualbox with trusty
+  - sudo apt-get install -q linux-headers-$(uname -r) linux-generic linux-image-generic linux-headers-generic linux-signed-generic
   - scripts/travis_init.sh
 script:
   - sudo vagrant up
